@@ -1,0 +1,26 @@
+public class SentenceAnalyzer {
+    public static void main(String[] args) {
+        String sentence = "Java Programming is FUN and Powerful!";
+
+        // 1. Count characters
+        System.out.println("Character count: " + sentence.length());
+
+        // 2. Convert to lowercase
+        String lower = sentence.toLowerCase();
+        System.out.println("Lowercase: " + lower);
+
+        // 3. Replace spaces with underscores
+        String replaced = sentence.replace(" ", "_");
+        System.out.println("With underscores: " + replaced);
+
+        // 4. Check if contains "Java"
+        System.out.println("Contains 'Java'? " + sentence.contains("Java"));
+
+        // 5. Display "FUN" in lowercase using substring
+        int start = sentence.indexOf("FUN");
+        if (start != -1) {
+            String word = sentence.substring(start, start + 3).toLowerCase();
+            System.out.println("Word 'FUN' in lowercase: " + word);
+        }
+    }
+}
